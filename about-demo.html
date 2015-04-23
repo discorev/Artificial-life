@@ -1,0 +1,29 @@
+<div class="col-md-12">
+      		<h2>About the demo</h2>
+      		<p>The fish in the simulator starts by follows the three rules of boids. This generates their basic movements and schooling behaviours. The equation that describes how these rules are used for updating the velocity \(v\) for fish \(i\) at each tick is:</p>
+      		<p>\[v_i \gets v_i + \phi_a (\text{alignment}_i-v_i) + \phi_c (\text{cohesion}_i-v_i) + \phi_s (\text{seperation}_i-v_i)\]</p>
+      		<p class="text-justify">Where \(\phi_x,~x \in \{a, c, s\}\) are weighting parameters that can be used to reduce the effects of any given rule and are user adjustable. In real life, there's a maximum speed a fish can swim at, therefore, a speed limit was introduced:</p>
+      		<p>\begin{equation}
+ v_i =
+  \begin{cases}
+   \frac{v_i}{|v_i|} \times \text{limit} & \text{if } |v_i| \gt \text{limit} \\
+   v_i       & \text{else}
+  \end{cases}
+  \label{eq:limit}
+      		\end{equation}</p>
+      		<p class="text-justify">The demo is made novel by giving the user the ability to add food and a predator. The food simply appears wherever the mouse is clicked and is modelled as having a "scent" that decays exponentially with distance.</p>
+      		<p>\[\text{attraction } = \frac{\text{food position}-\text{fish position}}{\text{distance}}\]</p>
+      		<p class="text-justify">Similarly the fish "fear" the shark, causing them to be repelled from it's position. Again here the effect is relative to the distance of the fish away from the shark. When the shark is added, the seperation parameter \(\phi_s\) is reduced to 10% to simulate the tight shoaling behaviour of fish evading a predator in nature.</p>
+      		<p>\[\text{repulsion } = \frac{\text{fish position}-\text{shark position}}{\text{distance}}\]</p>
+      		<p>Finally, inspired by both nature and particle swarm optimisation, any fish that "eats" food remembers the position at which the food was eaten and is more likely to swim back to this position:</p>
+      		<p>\[\text{best} = (\text{food position}-\text{fish position}) \times 0.1R\]</p>
+      		<p>Where \(R\) is a random number in the range [0, 1).<br />
+      		Putting these all together gives the final velocity update equation as:</p>
+      		<p>\[v_i \gets v_i + \phi_a (\text{alignment}_i-v_i) + \phi_c (\text{cohesion}_i-v_i) + \phi_s (\text{seperation}_i-v_i) + \text{attraction} + \text{repulsion} + \text{best}\]</p>
+      		<p>\eqref{eq:limit} is then applied, after which the velocity \(v\) is used to update the position \(p\) of fish \(i\):</p>
+      		<p>\[p_i = p_i + v_i\]</p>
+      		<p>&nbsp;</p>
+      		<p>The shark works in a similar way; however, as the predator is larger than the fish, it has a higher maximum speed. Furthermore, there is only one rule used to update its velocity:</p>
+      		<p>\[v_s = v_s + \text{cohesion toward fish}\]</p>
+      		<p><a class="btn btn-default" href="demo.html" target="_blank" role="button">Launch the demo &raquo;</a></p>
+      	</div>

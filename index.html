@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="swarmSite">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="Oliver Hayman">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="style/main-custom.css">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<title>Artificial Life</title>
+</head>
+<body data-spy="scroll" data-target="#navbar" data-offset="70">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Artificial Life</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <navigation></navigation>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div id="top" class="jumbotron">
+      <div class="container">
+        <h1>Swarm Intelligence &amp;<br /> Artificial Life</h1>
+        <p class="lead text-justify">This website gives details on a fish tank demonstration that uses swarm intelligence techniques to simulate fish swimming.
+        The demonstration allows users to add food for the fish as well as introduce a predator to the environment.</p>
+        <launch-button></launch-button>
+      </div>
+    </div>
+    
+    <div class="container">  
+      <div class="row">
+      
+      	<noscript><div class="col-md-12 alert alert-danger"><h1>Error: JavaScript Required</h1><p>To view the contents of this page, JavaScript is required. In order that you can view the page please enable JavaScript in your browser.<br />For help enabling JavaScript in your browser, please go to <a href="http://enable-javascript.com" target="_blank">http://enable-javascript.com</a>.</p></div></noscript>
+      	
+      	<swarm-intelligence></swarm-intelligence>
+      
+      	<artificial-life></artificial-life>
+      	
+      	<particle-swarm></particle-swarm>
+      	
+      	<about-demo></about-demo>
+      	
+      	<div id="importance" class="col-md-12">
+      		<h2>Why does this matter?</h2>
+      		<p class="text-justify">
+      			Both artificial life and swarm intelligence were initially inspired by nature which has shown evidence of being able to find solutions to highly complex problems.
+      			By using simplistic agents that do not require highly complex processing, these techniques can be used to great effect to solve a multitude of problems.
+      			By drawing on nature to inspire movement and using partical swarm techniques to search a search space, systems that are able to search extremely hostile environments can be developed cheaply with low cost parts.
+      		</p>
+      	</div>
+      	
+      	<div id="refs" class="col-md-12">
+      		<h2>References</h2>
+      		<p id="ref1">[1] Reynolds, C. W. (1987) "Flocks, Herds, and Schools: A Distributed Behavioral Model", in Computer Graphics, 21(4) (SIGGRAPH '87 Conference Proceedings) pages 25-34.</p>
+      		<p id="ref2">[2] D. Xydas, D. Norcott, K. Warwick, B. Whalley, S. Nasuto, V. Becerra, M. Hammond, J. Downes, and S. Marshall, “Architecture for neuronal cell control of a mobile robot,” in European Robotics Symposium 2008 (H. Bruyninckx, L. Pˇreuˇcil, and M. Kulich, eds.), vol. 44 of Springer Tracts in Advanced Robotics, pp. 23–31, Springer Berlin Heidelberg, 2008.</p>
+      		<p id="ref3">[3] S. Nasuto and J. Bishop, “Of (zombie) mice and animats,” in Philosophy and Theory of Artificial Intel- ligence (V. C. Mu ̈ller, ed.), vol. 5 of Studies in Applied Philosophy, Epistemology and Rational Ethics, pp. 85–106, Springer Berlin Heidelberg, 2013.</p>
+      		<p id="ref4">[4] Kennedy, J. "Particle swarm optimization." Encyclopedia of Machine Learning (2010): 760-766. [<a href="http://www.cs.tufts.edu/comp/150GA/homeworks/hw3/_reading6%201995%20particle%20swarming.pdf">View Online</a>]</p>
+      		<p id="ref5">[5] Sina &amp; Marie (2013) "Fish", image via The Noun Project Accessed: 2015-04-14 [<a href="https://thenounproject.com/term/fish/27052/">View Online</a>]</p>
+      		<p id="ref6">[6] Benn, O. (2012) "Shark", image via The Noun Project Accessed: 2015-04-14 [<a href="https://thenounproject.com/term/shark/1491/">View Online</a>]</p>
+      	</div>
+      	
+      </div>
+    </div>
+    
+    <script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+  			TeX: { equationNumbers: { autoNumber: "AMS" } }
+		});
+	</script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- include angular.js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="js/site.js"></script>
+    <!-- include angular.js bootstrap plugin for popovers -->
+    <script type="text/javascript" src="js/ui-bootstrap-custom-tpls-0.12.1.min.js"></script>
+    <!-- include bootstrap js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</body>
+</html>
