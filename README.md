@@ -4,5 +4,5 @@ The website utilising Twitter Bootstrap and AngularJS for rapid prototyping and 
 
 The demo is of fish schoaling and is based on the boids model of flocking behaviour. Some unique elements have been added through the introduction of a way to "feed" the fish by clicking the mouse and even introduce a preditor into the environment. More description into these is given on the site itself.
 
-A full life version of this can be found at: http://developer.olliespage.net/swarm
+The live version of this can be found at: https://ollies.dev/boids/
 
